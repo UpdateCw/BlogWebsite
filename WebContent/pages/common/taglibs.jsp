@@ -14,6 +14,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>异步 </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/msofficexp.png" media="screen" />
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="../assets/css/nprogress.css" rel="stylesheet" />
@@ -56,27 +57,27 @@
                     </a>
                 </li>
                 <li>
-                    <a href="about.jsp">
+                    <a href="/pages/about.jsp">
                         关于
                     </a>
                 </li>
                 <li>
-                    <a href="blog.jsp">
+                    <a href="/article/selectArticle">
                         博客
                     </a>
                 </li>
                 <li>
-                    <a href="works.jsp">
+                    <a href="/works/selectWorks">
                         作品
                     </a>
                 </li>
                 <li>
-                    <a href="contact.jsp">
+                    <a href="/pages/contact.jsp">
                         联系
                     </a>
                 </li>
                 <li>
-                    <a href="help.jsp">
+                    <a href="/pages/help.jsp">
                         帮助
                     </a>
                 </li>

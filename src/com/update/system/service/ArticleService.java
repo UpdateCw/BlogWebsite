@@ -1,5 +1,6 @@
 package com.update.system.service;
 
+import com.update.entity.Article;
 import com.update.framework.model.Page;
 import com.update.framework.model.queryObject.ArticleQueryObject;
 
@@ -11,5 +12,8 @@ import com.update.framework.model.queryObject.ArticleQueryObject;
  */
 public interface ArticleService {
 
+	@SuppressWarnings("rawtypes")
 	Page selectArticleList(ArticleQueryObject articleQueryObject) throws Exception;
+
+	Article selectGetOne(Long id) throws Exception;
 }

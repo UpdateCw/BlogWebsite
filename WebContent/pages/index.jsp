@@ -16,7 +16,7 @@
 	    <div class="row">
 	        <div class="col-md-12 post-container">
 	            <h2 class="post-title">
-	                <a href="content.html" title="">${entity.title}</a>
+	                <a href="/article/selectOne?id=${entity.id}" >${entity.title}</a>
 	            </h2>
 	            <div class="meta-box">
 	            <span class="m-post-date">
@@ -54,7 +54,7 @@
         <div class="col-md-12 post-container">
             <div class="row">
                 <div class="col-md-4">
-                    <a class="btn btn-primary home-browser-more-btn" href="blog.html">
+                    <a class="btn btn-primary home-browser-more-btn" href="/article/selectArticle">
                         <span>浏览更多文章</span>
                     </a>
                 </div>

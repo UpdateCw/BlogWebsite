@@ -1,7 +1,5 @@
 package com.update.system.action;
 
-import java.util.logging.Logger;
-
 import javax.annotation.Resource;
 
 import org.apache.struts2.convention.annotation.Action;
@@ -21,10 +19,11 @@ import com.update.system.service.ArticleService;
  */
 @Namespace(value = "/article")
 @Results({
-		@Result(name="isMain",location="/pages/index.jsp")
+		@Result(name="isMain",location="/pages/index.jsp"),
+		@Result(name="article",location="/pages/blog.jsp"),
+		@Result(name="content",location="/pages/content.jsp")
 		})
 public class ArticleAction extends BaseAction {
-    private Logger logger=Logger.getLogger(this.getClass().getName()); 
 	
 	private static final long serialVersionUID = 7675610277124547364L;
 	
@@ -32,6 +31,7 @@ public class ArticleAction extends BaseAction {
 	
 	@Resource
 	private ArticleService articleService;
+	private long id;
 	
 	private Article article;
 
@@ -49,6 +49,13 @@ public class ArticleAction extends BaseAction {
 		}
 		page=articleService.selectArticleList(articleQueryObject);
 		return "article";
+	}
+	
+	@Action("selectOne")
+	public String selectOne() throws Exception{
+		Article article=articleService.selectGetOne(id);
+		getRequest().setAttribute("article", article);
+		return "content";
 	}
 
 	public Article getArticle() {
@@ -68,7 +75,13 @@ public class ArticleAction extends BaseAction {
 		page=articleService.selectArticleList(articleQueryObject);
 		return "isMain";
 	}
-	
+
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 }
 
 	

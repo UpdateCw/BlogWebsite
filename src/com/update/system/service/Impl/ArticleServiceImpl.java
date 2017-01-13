@@ -1,7 +1,9 @@
 package com.update.system.service.Impl;
 
 import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
+
 import com.update.entity.Article;
 import com.update.framework.model.Page;
 import com.update.framework.model.queryObject.ArticleQueryObject;
@@ -23,6 +25,11 @@ public class ArticleServiceImpl implements ArticleService{
 	@Override
 	public Page<Article> selectArticleList(ArticleQueryObject articleQueryObject) throws Exception {
 		return articleDao.findQueryResult(articleQueryObject);
+	}
+
+	@Override
+	public Article selectGetOne(Long id) throws Exception {
+		return articleDao.get(Article.class, id);
 	} 
 
 }
