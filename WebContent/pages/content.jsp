@@ -41,7 +41,8 @@
     </div>
      <%@ include file="/pages/common/footer.jsp"%>
 </div>
-<script src="../assets/js/bootstrap.min.js"></script>
-<script src="../assets/APlayer/dist/APlayer.min.js"></script>
-<script src="../assets/APlayer/demo/demo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/APlayer/dist/APlayer.min.js"></script>
+<script src="/assets/APlayer/demo/demo.js"></script>
+<link rel="stylesheet" href="/assets/APlayer/dist/APlayer.min.css">
 <%@ include file="/pages/common/script.jsp"%>

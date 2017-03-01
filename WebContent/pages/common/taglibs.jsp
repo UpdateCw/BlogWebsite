@@ -14,15 +14,28 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>异步 </title>
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/msofficexp.png" media="screen" />
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/style.css" rel="stylesheet" />
-    <link href="../assets/css/nprogress.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/css/nivo-slider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../assets/css/default.css" type="text/css" media="screen" />
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/jquery.nivo.slider.pack.js"></script>
-    <script src="../assets/js/nprogress.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/msofficexp.png" media="screen" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/nprogress.css" rel="stylesheet" />
+     <link href="/assets/css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/assets/css/default.css" type="text/css" media="screen" />
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.nivo.slider.pack.js"></script>
+    <script src="/assets/js/samsung/modernizr.custom.js"></script>
+    <script src="/assets/js/nprogress.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/css/samsung/component.css" /> 
+	<style>
+		.codrops-demos a.current-demo {
+			color: #999;
+		}
+		.codrops-header h1 {
+			margin-top: 50px;
+			font-family: 'Microsoft Yahei';
+			color: #fff;
+		}
+		</style>
 </head>
 
 <body>
@@ -43,10 +56,10 @@
             </span>
             </button>
             <a class="navbar-brand" href="/article/index">
-                <img src="../assets/img/msofficexp.png" class="logo"/>
+                <img src="/assets/img/msofficexp.png" class="logo"/>
             </a>
             <a class="navbar-brand" href="/article/index">
-                <img src="../assets/img/logo.png" class="logo"/>
+                <img src="/assets/img/logo.png" class="logo"/>
             </a>
         </div>
         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
@@ -76,11 +89,6 @@
                         联系
                     </a>
                 </li>
-                <li>
-                    <a href="/pages/help.jsp">
-                        帮助
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
@@ -90,11 +98,11 @@
     <div class="left_menu">
         <ul class="menu_link">
            <li>
-                <img src="../assets/img/cg.jpg">
+                <img src="/assets/img/cg.jpg">
             </li>
             <li>
                 <a href="" class="simptip-position-right simptip-smooth simptip-movable">
-                    <img src="../assets/img/java.png">
+                    <img src="/assets/img/java.png">
               <span>
                 Java
               </span>
@@ -105,7 +113,7 @@
             <li>
                 <a href="" class="simptip-position-right simptip-smooth simptip-movable"
                    data-tooltip="自定义链接">
-                    <img src="../assets/img/sql.png">
+                    <img src="/assets/img/sql.png">
               <span>
                 sql
               </span>
@@ -116,7 +124,7 @@
             <li>
                 <a href="" class="simptip-position-right simptip-smooth simptip-movable"
                    data-tooltip="自定义链接">
-                    <img src="../assets/img/data.png">
+                    <img src="/assets/img/data.png">
               <span>
                 data
               </span>
@@ -127,7 +135,7 @@
              <li>
                 <a href="" class="simptip-position-right simptip-smooth simptip-movable"
                    data-tooltip="自定义链接">
-                    <img src="../assets/img/frame.png">
+                    <img src="/assets/img/frame.png">
               <span>
                 frame
               </span>
@@ -143,10 +151,10 @@
         <div class="col-md-12">
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
-                    <img src="../assets/img/owl.jpg" data-thumb="../assets/img/owl.jpg" alt="" />
-                    <img src="../assets/img/owl2.jpg" data-thumb="../assets/img/owl.jpg" alt="" />
-                    <img src="../assets/img/owl.jpg" data-thumb="../assets/img/owl.jpg" alt="" />
-                    <img src="../assets/img/owl2.jpg" data-thumb="../assets/img/owl2.jpg" alt="" />
+                    <img src="/assets/img/owl.jpg" data-thumb="/assets/img/owl.jpg" alt="" />
+                    <img src="/assets/img/owl2.jpg" data-thumb="/assets/img/owl.jpg" alt="" />
+                    <img src="/assets/img/owl.jpg" data-thumb="/assets/img/owl.jpg" alt="" />
+                    <img src="/assets/img/owl2.jpg" data-thumb="/assets/img/owl2.jpg" alt="" />
                 </div>
             </div>
         </div>

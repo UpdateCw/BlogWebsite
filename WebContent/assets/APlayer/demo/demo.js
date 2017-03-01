@@ -16,4 +16,4 @@ var ap3 = new APlayer({
 });
 
 ap3.init();
-
+console.log(ap3);
