@@ -19,13 +19,32 @@
     <link href="/assets/css/style.css" rel="stylesheet" />
     <link href="/assets/css/nprogress.css" rel="stylesheet" />
      <link href="/assets/css/index.css" rel="stylesheet" />
+     <link href="/assets/css/markdown.css" rel="stylesheet"  />
     <link rel="stylesheet" href="/assets/css/nivo-slider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/assets/css/default.css" type="text/css" media="screen" />
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery.nivo.slider.pack.js"></script>
     <script src="/assets/js/samsung/modernizr.custom.js"></script>
+    <script src="/assets/js/marked-0.3.6.js"></script>
     <script src="/assets/js/nprogress.js"></script>
 	<link rel="stylesheet" type="text/css" href="/assets/css/samsung/component.css" /> 
+	<script type="text/javascript">
+	$(function(){
+		  $.ajax({
+	            type: "POST",
+	            url: "/type/selectType",
+	            success: function (data) {
+	            	$.each(data.data.data,function(key,value){
+		            	var html="";
+			            	html+="<li><a href='/article/selectArticle?id="+value.id+"' class='simptip-position-right simptip-smooth simptip-movable'>"
+		            		html+="<img src='/assets/img/"+value.name+".png'><span>"+value.name+"</span>"
+		            		html+="<div class='clearfix'></div></a></li>";
+		            		$(".menu_link").append(html);
+		            });
+	            }
+		  });
+	})
+	</script>
 	<style>
 		.codrops-demos a.current-demo {
 			color: #999;
@@ -99,49 +118,6 @@
         <ul class="menu_link">
            <li>
                 <img src="/assets/img/cg.jpg">
-            </li>
-            <li>
-                <a href="" class="simptip-position-right simptip-smooth simptip-movable">
-                    <img src="/assets/img/java.png">
-              <span>
-                Java
-              </span>
-                    <div class="clearfix">
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="" class="simptip-position-right simptip-smooth simptip-movable"
-                   data-tooltip="自定义链接">
-                    <img src="/assets/img/sql.png">
-              <span>
-                sql
-              </span>
-                    <div class="clearfix">
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="" class="simptip-position-right simptip-smooth simptip-movable"
-                   data-tooltip="自定义链接">
-                    <img src="/assets/img/data.png">
-              <span>
-                data
-              </span>
-                    <div class="clearfix">
-                    </div>
-                </a>
-            </li>
-             <li>
-                <a href="" class="simptip-position-right simptip-smooth simptip-movable"
-                   data-tooltip="自定义链接">
-                    <img src="/assets/img/frame.png">
-              <span>
-                frame
-              </span>
-                    <div class="clearfix">
-                    </div>
-                </a>
             </li>
         </ul>
     </div>

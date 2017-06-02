@@ -12,4 +12,6 @@ import com.update.framework.model.Page;
 public interface TypeService {
 
 	Page<Type> selectTypeList() throws Exception;
+	
+	Type selectTypeById(Long id) throws Exception;
 }

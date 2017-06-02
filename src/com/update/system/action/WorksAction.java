@@ -16,41 +16,38 @@ import com.update.system.service.WorksService;
 
 /**
  * @author cw
- * @date 2016年6月12日 下午2:01:21
- * 作品action
+ * @date 2016年6月12日 下午2:01:21 作品action
  */
 @Namespace(value = "/works")
-@Results({
-		@Result(name="works",location="/pages/works.jsp")
-		})
+@Results({ @Result(name = "works", location = "/pages/works.jsp") })
 public class WorksAction extends BaseAction {
-    private Logger logger=Logger.getLogger(this.getClass().getName()); 
-	
+	private Logger logger = Logger.getLogger(this.getClass().getName());
+
 	private static final long serialVersionUID = 7675610277124547364L;
-	
+
 	private WorksQueryObject worksQueryObject;
-	
+
 	@Resource
 	private WorksService worksService;
-	
+
 	private Works works;
 
 	@Action("selectWorks")
-	public String selectworks() throws Exception{
-		String pageNo=getRequest().getParameter("pageNo");
-		int pn=1;
-		if(pageNo!=null&&!"".equals(pageNo)){
-			pn=Integer.parseInt(pageNo);
+	public String selectworks() throws Exception {
+		String pageNo = getRequest().getParameter("pageNo");
+		if (pageNo != null && !"".equals(pageNo)) {
+			pn = Integer.parseInt(pageNo);
 		}
-		
-		if(worksQueryObject==null){
-			worksQueryObject=new WorksQueryObject();
+
+		if (worksQueryObject == null) {
+			worksQueryObject = new WorksQueryObject();
 			worksQueryObject.setCurrentPageNo(pn);
 		}
-		page=worksService.selectWorksList(worksQueryObject);
+		page = worksService.selectWorksList(worksQueryObject);
+		logger.info("Get work information..");
 		return "works";
 	}
-	
+
 	public Works getWorks() {
 		return works;
 	}
@@ -60,5 +57,3 @@ public class WorksAction extends BaseAction {
 	}
 
 }
-
-	

@@ -6,7 +6,7 @@
     <div class="row top-title">
         <div class="col-md-12">
             <h1 class="page-title right">
-                <a href="blog.html">博客</a> >> <a href="content.html">${article.title}</a>
+                <a href="/article/selectArticle">博客</a> >> <a href="javascript:">${article.title}</a>
             </h1>
         </div>
     </div>
@@ -30,6 +30,11 @@
                             <p>
                          		${article.context}
                             </p>
+                            <br><br><br>
+                            <p>
+                            	 ——决定一个人有多优秀的，并不是看他有多努力，而是看这个人的思维模式。
+                            </p>
+                            <br><br>
                             <div id="player3" class="aplayer"></div>
                         </div>
                     </div>
@@ -39,7 +44,6 @@
             </div>
         </div>
     </div>
-     <%@ include file="/pages/common/footer.jsp"%>
 </div>
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/APlayer/dist/APlayer.min.js"></script>

@@ -42,7 +42,6 @@
 				</ul>
 			</section>
     </div>
-     <%@ include file="/pages/common/footer.jsp"%>
 </div>
 <script src="/assets/js/samsung/masonry.pkgd.min.js"></script>
 <script src="/assets/js/samsung/imagesloaded.pkgd.min.js"></script>

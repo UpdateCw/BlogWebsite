@@ -66,6 +66,5 @@
         <div class="col-md-4">
         </div>
     </div>
-    <%@ include file="/pages/common/footer.jsp"%>
 </div>
   <%@ include file="/pages/common/script.jsp"%>

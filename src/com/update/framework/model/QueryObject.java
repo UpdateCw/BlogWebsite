@@ -25,7 +25,7 @@ public abstract class QueryObject<T extends Serializable> implements IQueryObjec
 	/**
 	 * 分页条件的每页显示条数
 	 */
-	private int pageSize = 100;
+	private int pageSize = 5;
 	/**
 	 * 封装查询结果集的sql
 	 */
@@ -75,6 +75,7 @@ public abstract class QueryObject<T extends Serializable> implements IQueryObjec
 			countHql.append(" AND ").append(where);
 			hql.append(" AND ").append(where);
 		}
+		
 		params.addAll(Arrays.asList(objects));
 	}
 

@@ -1,7 +1,5 @@
 package com.update.system.action;
 
-import java.util.logging.Logger;
-
 import javax.annotation.Resource;
 
 import org.apache.struts2.convention.annotation.Action;
@@ -21,7 +19,6 @@ import com.update.system.service.TypeService;
 @Results({
 		})
 public class TypeAction extends JsonAction {
-    private Logger logger=Logger.getLogger(this.getClass().getName()); 
 	
 	private static final long serialVersionUID = 7675610277124547364L;
 	

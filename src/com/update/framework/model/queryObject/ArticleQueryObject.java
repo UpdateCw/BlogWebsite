@@ -1,5 +1,7 @@
 package com.update.framework.model.queryObject;
 
+import java.util.Date;
+
 import org.springframework.util.StringUtils;
 
 import com.update.entity.Article;
@@ -8,7 +10,8 @@ import com.update.framework.model.QueryObject;
 public class ArticleQueryObject extends QueryObject<Article>{
 	private String title;
 	private String label;
-	private String type;
+	private long type;
+	private Date dateString;
 
 	public ArticleQueryObject() {
 		super(Article.class.getName());
@@ -26,9 +29,14 @@ public class ArticleQueryObject extends QueryObject<Article>{
         if (StringUtils.hasText(label)) {
             addWhere("o.label = ? ",label);
         }
-        if (StringUtils.hasText(type)) {
-            addWhere("o.type.name = ? ",type);
+        if (type!=0) {
+            addWhere("o.type.id = ? ",type);
         }
+        
+    	if (dateString!=null) {
+    		addWhere("o.createDate>=? and  o.createDate <=now() ", dateString);
+		} 
+    	
 	}
 
 	public String getTitle() {
@@ -47,12 +55,22 @@ public class ArticleQueryObject extends QueryObject<Article>{
 		this.label = label;
 	}
 
-	public String getType() {
+	public long getType() {
 		return type;
 	}
 
-	public void setType(String type) {
+	public void setType(long type) {
 		this.type = type;
 	}
+
+	public Date getDateString() {
+		return dateString;
+	}
+
+	public void setDateString(Date dateString) {
+		this.dateString = dateString;
+	}
+
+
 	
 }

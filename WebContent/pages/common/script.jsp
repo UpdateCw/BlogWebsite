@@ -21,8 +21,16 @@
         $('.version').text(NProgress.version);
         NProgress.start();
         setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+        
     })
 </script>
+  <!-- 网站底部 -->
+    <footer>
+        <!--版权信息-->
+        <div class="copyright">
+          </span>Copyright &copy; 2016</span> <strong>Update</strong>
+        </div>
+    </footer>
 </body>
 
 </html>

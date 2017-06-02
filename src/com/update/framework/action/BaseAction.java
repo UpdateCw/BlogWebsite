@@ -11,6 +11,7 @@ import org.apache.struts2.ServletActionContext;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.update.framework.model.Page;
+import com.update.framework.model.ResponseData;
 
 /**
  * 基础控制类
@@ -19,6 +20,20 @@ import com.update.framework.model.Page;
  *  @date 2016-6-4 上午10:52:33 
  */
 public  class BaseAction extends ActionSupport{
+	
+	protected int pn=1;
+	
+	/**
+     * 返回对象
+     */
+    protected ResponseData result = new ResponseData();
+	
+	public ResponseData getResult() {
+		return result;
+	}
+	public void setResult(ResponseData result) {
+		this.result = result;
+	}
 	/**
 	 * 分页对象
 	 */

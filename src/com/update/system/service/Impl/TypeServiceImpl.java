@@ -1,7 +1,9 @@
 package com.update.system.service.Impl;
 
 import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
+
 import com.update.entity.Type;
 import com.update.framework.model.Page;
 import com.update.framework.model.queryObject.TypeQueryObject;
@@ -24,6 +26,11 @@ public class TypeServiceImpl implements TypeService{
 	public Page<Type> selectTypeList() throws Exception {
 		TypeQueryObject typeQueryObject=new TypeQueryObject();
 		return typeDao.findQueryResult(typeQueryObject);
+	}
+
+	@Override
+	public Type selectTypeById(Long id) throws Exception {
+		return typeDao.get(Type.class, id);
 	}  
 
 }
